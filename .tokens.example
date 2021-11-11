@@ -1,0 +1,2 @@
+# Example file of the tokens file so I remember which tokens I'm supposed to have
+export REMIX_TOKEN="reallylongkey"
