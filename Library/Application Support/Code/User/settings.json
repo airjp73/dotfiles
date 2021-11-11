@@ -1,0 +1,85 @@
+{
+  "vim.sneak": true,
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  // Maybe try this again when themes support the colors for this
+  // "editor.guides.bracketPairs": true,
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true
+  },
+  // TODO: maybe turn this on when color theme supports it?
+  // "editor.bracketPairColorization.enabled": true,
+  "breadcrumbs.enabled": true,
+  "editor.lineNumbers": "on",
+  "zenMode.centerLayout": false,
+  "editor.minimap.maxColumn": 70,
+  "zenMode.hideStatusBar": false,
+  "workbench.editor.showTabs": false,
+  "explorer.autoReveal": false,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "e"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.files.action.showActiveFileInExplorer"
+        }
+      ]
+    }
+  ],
+  "editor.scrollBeyondLastLine": false,
+  "typescript.tsserver.maxTsServerMemory": 6144,
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "vim.enableNeovim": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[rust]": {
+    "editor.tabSize": 4
+  },
+  "editor.suggest.showProperties": false,
+  "workbench.colorTheme": "Ariake Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "'Dank Mono'",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "FSharp.useSdkScripts": true,
+  "python.linting.pylintArgs": ["--generated-members=cv2.*"],
+  "python.pythonPath": "/usr/local/bin/python3",
+  "python.languageServer": "Pylance",
+  "java.configuration.checkProjectSettingsExclusions": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.renderWhitespace": "all",
+  "gitlens.codeLens.enabled": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "editor.inlineSuggest.enabled": true,
+  "mssql.connections": [
+    {
+      "server": "{{put-server-name-here}}",
+      "database": "{{put-database-name-here}}",
+      "user": "{{put-username-here}}",
+      "password": ""
+    }
+  ]
+}
