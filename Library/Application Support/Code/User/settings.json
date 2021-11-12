@@ -8,6 +8,9 @@
     "source.fixAll": true,
     "source.fixAll.eslint": true
   },
+  "eslint.rules.customizations": [
+    { "rule": "prettier/prettier", "severity": "off" }
+  ],
   // TODO: maybe turn this on when color theme supports it?
   // "editor.bracketPairColorization.enabled": true,
   "breadcrumbs.enabled": true,
