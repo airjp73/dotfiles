@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export NVIM_PATH=$(which nvim)
 
 # Any sensitive info that shouldn't go in git
 source "$HOME/.tokens"
