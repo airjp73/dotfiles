@@ -91,5 +91,6 @@
       "user": "{{put-username-here}}",
       "password": ""
     }
-  ]
+  ],
+  "terminal.integrated.defaultProfile.osx": "zsh"
 }
