@@ -1,0 +1,5 @@
+#! /bin/zsh
+
+COMMAND=$1
+shift
+npm run $COMMAND -- $@
