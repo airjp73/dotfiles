@@ -1,12 +1,22 @@
 // Menu: Open Project
-// Description: Open a project from ~/dev folder
+// Description: Open a project from ~/dev folder or current project
 // Shortcut: cmd shift .
 
-import "@johnlindquist/kit"
+import "@johnlindquist/kit";
+import { scriptValue } from "@johnlindquist/kit/core/db";
 
-const projectDirPath = "~/dev";
+const HOME = await env("HOME");
+const projectsFile = await attemptImport(`${HOME}/.projects.ts`);
 
-const projects = ls(projectDirPath).map((dir) => {
+type Project = {
+  name: string;
+  value: string;
+  description?: string;
+};
+
+const projectDirPath = `${HOME}/dev`;
+
+const projects = ls(projectDirPath).map((dir): Project => {
   const fullPath = path.join(projectDirPath, dir);
   return {
     name: dir,
@@ -15,7 +25,16 @@ const projects = ls(projectDirPath).map((dir) => {
   };
 });
 
-const project = await arg("Select project:", projects);
+const projectsFromFile = projectsFile?.default ?? [];
+const allProjects: Project[] = [
+  // The value seems to get mangled if we keep it as an array,
+  // so we need to make it a comma-separated string and split after
+  ...projectsFromFile.map((proj) => ({ ...proj, value: proj.value.join(",") })),
+  ...projects,
+];
+const project = await arg("Select project:", allProjects);
 
-exec(`open -a iTerm ${project}`)
-edit(project);
+project.split(",").forEach((dir) => {
+  exec(`open -a iTerm ${dir}`);
+  exec(`code ${dir}`);
+});
