@@ -1,4 +1,5 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Some things are in bashrc so they can be picked up by Sublime Merge
+source ~/.bashrc
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -51,10 +52,6 @@ VSCODE_SETTINGS="$HOME/Library/Application Support/Code/User/settings.json"
 ZSH_DISABLE_COMPFIX=true
 
 eval "$(starship init zsh)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # NPM alias w/ autocompletion from current dir
 # alias nr="npm run"
