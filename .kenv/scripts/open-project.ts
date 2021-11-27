@@ -3,10 +3,12 @@
 // Shortcut: cmd shift .
 
 import "@johnlindquist/kit";
-import { scriptValue } from "@johnlindquist/kit/core/db";
+import { existsSync } from "fs";
 
 const HOME = await env("HOME");
-const projectsFile = await attemptImport(`${HOME}/.projects.ts`);
+const projectsFile = existsSync(`${HOME}/.projects.ts`)
+  ? await attemptImport(`${HOME}/.projects.ts`)
+  : undefined;
 
 type Project = {
   name: string;
