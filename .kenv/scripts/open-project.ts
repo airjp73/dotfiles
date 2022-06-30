@@ -37,6 +37,6 @@ const allProjects: Project[] = [
 const project = await arg("Select project:", allProjects);
 
 project.split(",").forEach((dir) => {
-  exec(`open -a iTerm ${dir}`);
+  exec(`open -a Warp ${dir}`);
   exec(`code ${dir}`);
 });
