@@ -16,7 +16,6 @@ ZSH_THEME="robbyrussell"
 
 # Plugins
 plugins=(git)
-plugins+=(zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
