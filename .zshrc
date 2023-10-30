@@ -80,3 +80,10 @@ _npm_scripts() {
 }
 
 complete -F _npm_scripts nr
+
+# bun completions
+[ -s "/Users/aaronpettengill/.bun/_bun" ] && source "/Users/aaronpettengill/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
