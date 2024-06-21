@@ -1,6 +1,8 @@
 local keymap = vim.keymap
 
 keymap.set("n", "<leader>e", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer" })
+keymap.set("n", "<leader>c", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file tree" })
+
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("n", "<D-s>", ":w<CR>", { desc = "Save with cmd-s" })
 keymap.set("n", "<D-a>", "ggVG", { desc = "Select all with cmd-a" })
