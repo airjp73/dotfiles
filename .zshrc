@@ -46,6 +46,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 VSCODE_SETTINGS="$HOME/Library/Application Support/Code/User/settings.json"
+eval $(thefuck --alias)
 
 # Make completions work
 ZSH_DISABLE_COMPFIX=true
