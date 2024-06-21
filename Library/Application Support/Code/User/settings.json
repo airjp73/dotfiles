@@ -17,6 +17,7 @@
     "typescript",
     "typescriptreact"
   ],
+  "eslint.experimental.useFlatConfig": true,
   // TODO: maybe turn this on when color theme supports it?
   // "editor.bracketPairColorization.enabled": true,
   "breadcrumbs.enabled": true,
@@ -28,6 +29,14 @@
   "workbench.editor.showTabs": "single",
   "explorer.autoReveal": false,
   "vim.normalModeKeyBindings": [
+    {
+      "before": ["C-w", "v"],
+      "after": [":", "v", "s", "<Enter>"]
+    },
+    {
+      "before": ["C-w", "s"],
+      "after": [":", "s", "p", "<Enter>"]
+    },
     {
       "before": ["<leader>", "e"],
       "after": [],
@@ -119,9 +128,14 @@
     "*.jsx": "${capture}.js",
     "*.tsx": "${capture}.ts",
     "tsconfig.json": "tsconfig.*.json",
-    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml"
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml",
+    "Cargo.toml": "Cargo.lock"
   },
   "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prisma.showPrismaDataPlatformNotification": false,
+  "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
