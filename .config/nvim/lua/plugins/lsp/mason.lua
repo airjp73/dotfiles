@@ -1,6 +1,7 @@
 return {
 	{
 		"williamboman/mason.nvim",
+		cond = not vim.g.vscode,
 		config = function()
 			-- import mason
 			local mason = require("mason")
@@ -18,6 +19,7 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
+		cond = not vim.g.vscode,
 		requires = {
 			"williambowman/mason.nvim",
 		},
@@ -45,6 +47,7 @@ return {
 	},
 	{
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		cond = not vim.g.vscode,
 		requires = {
 			"williambowman/mason.nvim",
 		},
@@ -53,6 +56,7 @@ return {
 			mason_tool_installer.setup({
 				ensure_installed = {
 					"prettier", -- prettier formatter
+					"eslint",
 					"stylua", -- lua formatter
 					"isort", -- python formatter
 					"black", -- python formatter

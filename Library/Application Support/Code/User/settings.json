@@ -137,5 +137,8 @@
   "prisma.showPrismaDataPlatformNotification": false,
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
   }
 }
