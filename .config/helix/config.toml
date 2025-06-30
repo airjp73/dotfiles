@@ -1,1 +1,4 @@
 theme = "dracula"
+
+[keys.normal.m]
+t = "@|~/.config/helix/surround_tag.sh<ret>sxxhelixtagxx<ret>c"
