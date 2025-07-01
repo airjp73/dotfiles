@@ -1,19 +1,19 @@
 [[language]]
 name = "javascript"
 auto-format = true
-formatter = { command = "prettier", args = ["--parser", "typescript"] }
+formatter = { command = "prettier", args = ["--stdin-filepath", "fake-file.js"] }
 
 [[language]]
 name = "jsx"
 auto-format = true
-formatter = { command = "prettier", args = ["--parser", "typescript"] }
+formatter = { command = "prettier", args = ["--stdin-filepath", "fake-file.jsx"] }
 
 [[language]]
 name = "typescript"
 auto-format = true
-formatter = { command = "prettier", args = ["--parser", "typescript"] }
+formatter = { command = "prettier", args = ["--stdin-filepath", "fake-file.ts"] }
 
 [[language]]
 name = "tsx"
 auto-format = true
-formatter = { command = "prettier", args = ["--parser", "typescript"] }
+formatter = { command = "prettier", args = ["--stdin-filepath", "fake-file.tsx"] }
