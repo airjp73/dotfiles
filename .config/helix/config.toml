@@ -4,3 +4,9 @@ theme = "dracula"
 t = "@|~/.config/helix/surround_tag.sh<ret>sxxhelixtagxx<ret>c"
 T = "@s\\x3C.+?\\x3E<ret><C-s>,d<C-o>(,d"
 R = "@s\\x3C/?\\w*<ret>;<C-s>,ax<esc>miwcxxhelixtagxx<esc><C-o>(,ax<esc>miwcxxhelixtagxx<esc><C-o>sxxhelixtagxx<ret>c"
+
+[keys.normal.space]
+L = ":lsp-restart"
+
+[keys.insert]
+C-space = "completion"
