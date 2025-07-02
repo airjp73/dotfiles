@@ -1,5 +1,8 @@
 theme = "dracula"
 
+[keys.normal]
+"A-/" = "toggle_line_comments"
+
 [keys.normal.m]
 t = "@|~/.config/helix/surround_tag.sh<ret>sxxhelixtagxx<ret>c"
 T = "@s\\x3C.+?\\x3E<ret><C-s>,d<C-o>(,d"
