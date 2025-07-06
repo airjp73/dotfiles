@@ -14,6 +14,7 @@ w = ["save_selection", "goto_word"]
 
 [keys.normal.space]
 L = ":lsp-restart"
+F = "file_picker_in_current_buffer_directory"
 
 [keys.insert]
 C-space = "completion"
