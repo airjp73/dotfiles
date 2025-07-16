@@ -1,5 +1,8 @@
 theme = "dracula"
 
+[editor.file-picker]
+hidden = false
+
 [keys.normal]
 "A-/" = "toggle_line_comments"
 "Cmd-/" = "toggle_line_comments"
