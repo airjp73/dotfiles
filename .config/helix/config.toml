@@ -4,8 +4,8 @@ theme = "dracula"
 hidden = false
 
 [keys.normal]
-"A-/" = "toggle_line_comments"
 "Cmd-/" = "toggle_line_comments"
+"A-/" = "@i/**\n *\n */<esc>ki "
 
 [keys.normal.m]
 t = "@|~/.config/helix/surround_tag.sh<ret>sxxhelixtagxx<ret>c"
@@ -21,3 +21,4 @@ F = "file_picker_in_current_buffer_directory"
 
 [keys.insert]
 C-space = "completion"
+"A-/" = "@/**\n *\n */<esc>ki "
