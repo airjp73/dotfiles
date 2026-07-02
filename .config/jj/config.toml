@@ -1,0 +1,22 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[user]
+name = "Aaron Pettengill"
+email = "apettengill@junipersquare.com"
+
+[gg.ui]
+recent-workspaces = ["/Users/aaronpettengill/dev/live-collaboration-client"]
+
+[aliases]
+# Rebase the current stack onto the latest trunk.
+sync = ["rebase", "-s", "roots(trunk()..@)", "-d", "trunk()"]
+# Land a squash-merged PR from the bottom of the stack: jj land [bookmark]
+land = ["util", "exec", "--", "bash", "-c", 'exec "${XDG_CONFIG_HOME:-$HOME/.config}/jj/jj-land.sh" "$@"', "jj-land"]
+# Pull the nearest bookmark behind you up to the latest commit (@-).
+tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
+
+[revset-aliases]
+# Local bookmarks in the current stack (between trunk and the working copy).
+'stack()' = 'bookmarks() & (trunk()..@)'
+# The nearest bookmark at or behind a given revision.
+'closest_bookmark(to)' = 'heads(::to & bookmarks())'
