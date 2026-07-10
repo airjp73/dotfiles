@@ -21,7 +21,7 @@ if [ -z "$merged" ]; then
 fi
 
 jj git fetch --branch main            # advance trunk; keep the merged bookmark alive locally
-jj rebase -s "all:${merged}+" -d 'trunk()'  # reparent the next PR (children of the merged tip) onto trunk
+jj rebase -s "${merged}+" -d 'trunk()'  # reparent the next PR (children of the merged tip) onto trunk
 jj abandon "trunk()..${merged}"       # drop the now-merged commits
 jj git fetch                          # pull the remote branch deletion + prune
 jj bookmark delete "${merged}"        # clean up the local bookmark

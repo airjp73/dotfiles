@@ -4,8 +4,12 @@
 name = "Aaron Pettengill"
 email = "apettengill@junipersquare.com"
 
+[ui]
+editor = "hx"
+merge-editor = "smerge"
+
 [gg.ui]
-recent-workspaces = ["/Users/aaronpettengill/dev/live-collaboration-client"]
+recent-workspaces = ["/Users/aaronpettengill/dev/live-collaboration-client", "/Users/aaronpettengill/dev/live-collaboration-server"]
 
 [aliases]
 # Rebase the current stack onto the latest trunk.
@@ -13,10 +17,15 @@ sync = ["rebase", "-s", "roots(trunk()..@)", "-d", "trunk()"]
 # Land a squash-merged PR from the bottom of the stack: jj land [bookmark]
 land = ["util", "exec", "--", "bash", "-c", 'exec "${XDG_CONFIG_HOME:-$HOME/.config}/jj/jj-land.sh" "$@"', "jj-land"]
 # Pull the nearest bookmark behind you up to the latest commit (@-).
-tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
+tug = ["bookmark", "move", "--from", "closest_bookmark(@)", "--to", "@"]
 
 [revset-aliases]
 # Local bookmarks in the current stack (between trunk and the working copy).
 'stack()' = 'bookmarks() & (trunk()..@)'
 # The nearest bookmark at or behind a given revision.
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+'my_bookmarks'  = 'bookmarks() & mine()'
+'recent_stacks' = 'trunk()::my_bookmarks'
+'old_tips'      = 'my_bookmarks ~ (trunk()::)'
+'old_forks'     = 'roots((::old_tips) ~ (::trunk()))-'
+'clean_log'     = 'present(@) | trunk() | recent_stacks | old_tips | old_forks'
