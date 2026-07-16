@@ -1,0 +1,18 @@
+format = """
+$os\
+$username\
+$directory\
+${custom.jj}\
+$all
+"""
+
+[custom.jj]
+when = "jj-starship detect"
+shell = ["jj-starship"]
+format = "$output "
+
+[git_branch]
+disabled = true
+
+[git_status]
+disabled = true
