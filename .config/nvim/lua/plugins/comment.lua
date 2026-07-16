@@ -1,6 +1,14 @@
+local event
+
+if not vim.g.vscode then
+	event = { "BufReadPre", "BufNewFile" }
+else
+	event = { "VeryLazy" }
+end
+
 return {
 	"numToStr/Comment.nvim",
-	event = { "BufReadPre", "BufNewFile" },
+	event = event,
 	dependencies = {
 		"JoosepAlviste/nvim-ts-context-commentstring",
 	},

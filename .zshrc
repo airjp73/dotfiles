@@ -105,3 +105,15 @@ unset __conda_setup
 
 # opam configuration
 [[ ! -r /Users/aaronpettengill/.opam/opam-init/init.zsh ]] || source /Users/aaronpettengill/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+export PATH="$HOME/.local/bin:$PATH"
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"
+export JAVA_HOME=/opt/homebrew/Cellar/openjdk@21/21.0.11/libexec/openjdk.jdk/Contents/Home
+
+unalias gg

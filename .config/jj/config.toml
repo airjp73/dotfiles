@@ -8,9 +8,6 @@ email = "apettengill@junipersquare.com"
 editor = "hx"
 merge-editor = "smerge"
 
-[gg.ui]
-recent-workspaces = ["/Users/aaronpettengill/dev/live-collaboration-client", "/Users/aaronpettengill/dev/live-collaboration-server"]
-
 [aliases]
 # Rebase the current stack onto the latest trunk.
 sync = ["rebase", "-s", "roots(trunk()..@)", "-d", "trunk()"]
